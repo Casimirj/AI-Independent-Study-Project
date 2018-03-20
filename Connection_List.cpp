@@ -31,7 +31,7 @@ return iterator;
 
 int Connection_List::getSize() {
     /*
-     * gets size of list, why do you even care?
+     * gets size of list, why do you even care enough to read this?
      */
     return size;
 }

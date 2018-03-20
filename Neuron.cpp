@@ -6,7 +6,11 @@
 
 
 Neuron::Neuron() {
-
+    //todo: neuron constructor
+    //todo: generate list of connections to all neurons in next layer
+        //this will probably be an input for the constructor
+        //since its connecting to all neurons in next layer
+        //this should just be the same one passed to each in the layer
 
 
 }
