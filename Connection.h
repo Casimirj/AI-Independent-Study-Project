@@ -14,11 +14,11 @@ private:
     Neuron* target;
 
     //Stuff for Linked List (connection_list)
-    Connection* next;
+    Connection* next = nullptr;
 
 
 public:
-    Connection();
+    Connection(int input);
     void sendSignal(double input);
 
 
@@ -27,6 +27,8 @@ public:
 
     //Stuff for Linked List (connection_list)
     Connection* getNext();
+    void setNext(Connection* input);
+    bool nextIsNull();
 };
 
 

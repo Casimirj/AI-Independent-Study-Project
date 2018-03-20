@@ -14,11 +14,14 @@ class Connection_List {
  * connections, without having the list functionality as
  * part of the connection class.
  *
- * It just seemed a whole lot cleaner this way
+ * It just seemed a whole lot cleaner this way,the reason
+ * I am using a linked list is to add the posibility of
+ * adding/removing connections if my learning algorithm
+ * ever wants to do that
  */
 
 private:
-    Connection* head;
+    Connection* head = nullptr;
     int size = 0;
 public:
     void addConnection(Connection* input);

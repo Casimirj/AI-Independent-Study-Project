@@ -18,6 +18,8 @@ double Neuron::determineActivation() {
  * and apply the bianary sigmoid funtion to it
  * storing the output in $activation
  */
+
+    //todo: implement sigmoid function
 }
 
 void Neuron::finalizeInputSum() {
@@ -33,6 +35,7 @@ void Neuron::finalizeInputSum() {
  * because they were hit first in the loop, giving a disingenuous
  * input signal.
  */
+    inputSignal = newInputSum;
 }
 
 void Neuron::sendOutputSignal() {
@@ -41,4 +44,15 @@ void Neuron::sendOutputSignal() {
  * And send its activation as output. After the signal is altered by
  * the connections weight it is stored in the target neurons $newInputSum variable
  */
+    for(int i = 0; i < connections->getSize(); i++){
+        connections->getConnection(i)->sendSignal(activation);
+    }
+}
+
+
+void Neuron::addToInputSum(double input) {
+/*
+ * adds to the total of all inputs
+ */
+    newInputSum += input;
 }

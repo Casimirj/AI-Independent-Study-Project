@@ -12,11 +12,12 @@ class Net {
 private:
     int tick = 0;
 
-    const int numberOfLayers = 4;
+    const static int numberOfLayers = 4;
     Layer* layers[numberOfLayers];
 
 public:
     Net();
+    void getOutputVectors();//zhu li, do the thing!
     void doTick();
 
     void getInputVectors();

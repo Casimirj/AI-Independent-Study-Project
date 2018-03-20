@@ -10,10 +10,15 @@
 
 class Layer {
 private:
-    const int size = 3;
+    const static int size = 3;
     Neuron* neuronList[size];
 public:
+    Layer();
     int getSize();
+
+    void finalizeLayerInputs();
+    void determineActivations();
+    void sendOutputSignals();
 
 };
 
