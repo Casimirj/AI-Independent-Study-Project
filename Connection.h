@@ -18,7 +18,7 @@ private:
 
 
 public:
-    Connection(int input);
+    Connection(Neuron* inputtarget, int inputweight);
     void sendSignal(double input);
 
 

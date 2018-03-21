@@ -6,9 +6,9 @@
 
 
 
-Connection::Connection(int input) {
-    target = new Neuron();
-    weight = input;
+Connection::Connection(Neuron* inputtarget, int inputweight) {
+    target = inputtarget;
+    weight = inputweight;
 }
 
 double Connection::getWeight() {
@@ -38,3 +38,4 @@ void Connection::setNext(Connection* input) {
 bool Connection::nextIsNull() {
     return (this->next == nullptr);
 }
+

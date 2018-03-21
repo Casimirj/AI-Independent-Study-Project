@@ -5,7 +5,12 @@
 #include "Net.h"
 
 Net::Net() {
-
+    //adds connections to neurons
+    for(int i = 0; i < numberOfLayers - 1; i++){
+        //each layer gets connections for all neurons in the next layer
+        Connection_List* input = layers[i+1]->createConnectionList();
+        layers[i]->addConnectionLists(input);
+    }
 }
 
 
@@ -34,7 +39,7 @@ void Net::doTick() {
  *          +The reason for this is not to confuse the input it gets from other neurons with the input from the last tick
  *          +This is done completely separately from the exchanging input phase
  *      -Each neuron is looped through again (same fashion)
- *          +Neurons activation is caluclated from its $inputSignal
+ *          +Neurons activation is calculated from its $inputSignal
  *          +Neurons send a signal through its connections
  *          +Signal is stored in other neurons $newInputSum vaue
  *
@@ -52,4 +57,5 @@ void Net::doTick() {
 
 
 }
+
 

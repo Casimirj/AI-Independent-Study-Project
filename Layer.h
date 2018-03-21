@@ -20,6 +20,8 @@ public:
     void determineActivations();
     void sendOutputSignals();
 
+    void addConnectionLists(Connection_List *inputList);
+    Connection_List *createConnectionList();
 };
 
 

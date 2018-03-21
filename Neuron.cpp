@@ -7,11 +7,6 @@
 
 Neuron::Neuron() {
     //todo: neuron constructor
-    //todo: generate list of connections to all neurons in next layer
-        //this will probably be an input for the constructor
-        //since its connecting to all neurons in next layer
-        //this should just be the same one passed to each in the layer
-
 
 }
 
@@ -40,6 +35,7 @@ void Neuron::finalizeInputSum() {
  * input signal.
  */
     inputSignal = newInputSum;
+    newInputSum = 0;
 }
 
 void Neuron::sendOutputSignal() {
@@ -59,4 +55,8 @@ void Neuron::addToInputSum(double input) {
  * adds to the total of all inputs
  */
     newInputSum += input;
+}
+
+void Neuron::addConnections(Connection_List* input){
+    connections = input;
 }

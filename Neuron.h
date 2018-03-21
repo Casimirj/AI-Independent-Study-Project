@@ -27,8 +27,7 @@ public:
     void finalizeInputSum();
 
     void addToInputSum(double input);
-
-};
+    void addConnections(Connection_List* input);
 
 
 #endif //NEURAL_NETS_NEURON_H
