@@ -18,7 +18,8 @@ double Neuron::determineActivation() {
  * storing the output in $activation
  */
 
-    //todo: implement sigmoid function
+    if(inputSignal > 0) activation = 1;
+    else activation = 0;
 }
 
 void Neuron::finalizeInputSum() {

@@ -41,7 +41,7 @@ void Net::doTick() {
  *      -Each neuron is looped through again (same fashion)
  *          +Neurons activation is calculated from its $inputSignal
  *          +Neurons send a signal through its connections
- *          +Signal is stored in other neurons $newInputSum vaue
+ *          +Signal is stored in other neurons $newInputSum value
  *
  * Tick should keep going until a specific output vector is reached.
  *      Im not quite sure how that will work yet
